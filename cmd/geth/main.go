@@ -264,6 +264,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
+	fmt.Println("done??????")
 }
 
 // prepare manipulates memory cache allowance and setups metric system.
