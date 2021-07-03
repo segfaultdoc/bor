@@ -265,6 +265,7 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Println("done??????")
+	panic("done kek")
 }
 
 // prepare manipulates memory cache allowance and setups metric system.
