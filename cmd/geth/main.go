@@ -427,9 +427,7 @@ func startNode(ctx *cli.Context, stack *node.Node, backend ethapi.Backend) {
 		if err := ethBackend.StartMining(threads); err != nil {
 			utils.Fatalf("Failed to start mining: %v", err)
 		}
-		panic("2")
 	}
-	panic("3")
 }
 
 // unlockAccounts unlocks any account specifically requested.
