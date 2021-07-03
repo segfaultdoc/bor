@@ -18,7 +18,6 @@ package core
 
 import (
 	"errors"
-	"fmt"
 	"math"
 	"math/big"
 	"sort"
@@ -727,7 +726,7 @@ func (pool *TxPool) promoteTx(addr common.Address, hash common.Hash, tx *types.T
 	if pool.pending[addr] == nil {
 		pool.pending[addr] = newTxList(true)
 	}
-	fmt.Printf("adding new tx: %v\n", hash)
+	log.Info("adding new tx: ", hash)
 	list := pool.pending[addr]
 
 	inserted, old := list.Add(tx, pool.config.PriceBump)
