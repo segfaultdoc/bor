@@ -264,8 +264,6 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	fmt.Println("done??????")
-	panic("done kek")
 }
 
 // prepare manipulates memory cache allowance and setups metric system.
@@ -411,6 +409,7 @@ func startNode(ctx *cli.Context, stack *node.Node, backend ethapi.Backend) {
 	}
 
 	// Start auxiliary services if enabled
+	fmt.Println("1")
 	if ctx.GlobalBool(utils.MiningEnabledFlag.Name) || ctx.GlobalBool(utils.DeveloperFlag.Name) {
 		// Mining only makes sense if a full Ethereum node is running
 		if ctx.GlobalString(utils.SyncModeFlag.Name) == "light" {
@@ -428,7 +427,9 @@ func startNode(ctx *cli.Context, stack *node.Node, backend ethapi.Backend) {
 		if err := ethBackend.StartMining(threads); err != nil {
 			utils.Fatalf("Failed to start mining: %v", err)
 		}
+		panic("2")
 	}
+	panic("3")
 }
 
 // unlockAccounts unlocks any account specifically requested.
